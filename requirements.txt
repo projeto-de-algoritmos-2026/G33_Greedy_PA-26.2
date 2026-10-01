@@ -1,0 +1,4 @@
+# HuffPress - Dependências
+# Interface moderna desenvolvida com CustomTkinter.
+
+customtkinter>=6.0.0

@@ -1,0 +1,12 @@
+HuffPress - Demonstração do Algoritmo Ambicioso de Huffman
+Universidade de Brasília (UnB) - Projeto de Algoritmos
+
+O algoritmo de Huffman é um método ambicioso clássico para compressão de dados sem perdas (lossless).
+Desenvolvido por David Huffman em 1952, ele atribui códigos de comprimento variável para caracteres:
+- Símbolos com maior frequência recebem códigos binários menores.
+- Símbolos com menor frequência recebem códigos binários maiores.
+
+Decisão ambiciosa fundamental:
+"Em cada etapa, escolher os dois nós de menor frequência disponíveis na Min-Heap."
+
+Este arquivo serve como exemplo prático para testar a compactação (.huff) e descompactação com verificação estrita de integridade via SHA-256.

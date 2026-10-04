@@ -244,7 +244,7 @@ class ModernTabBar(ctk.CTkFrame):
 # =============================================================================
 class ModernTreeCanvas(ctk.CTkFrame):
     """
-    Visualizador interativo da árvore de Huffman:
+    Visualizador interativo e responsivo da árvore de Huffman:
     - Ocupa praticamente toda a aba
     - Ajustar à tela (Fit to View) real
     - Zoom (40% a 250%) com scroll ou botões

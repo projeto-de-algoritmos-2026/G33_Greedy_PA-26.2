@@ -1699,7 +1699,7 @@ class HuffPressGUI:
 
     def __init__(self, root: ctk.CTk):
         self.root = root
-        self.root.title("HuffPress")
+        self.root.title("HuffPress - Compactador Didático")
         self.root.geometry("1180x760")
         self.root.minsize(980, 680)
         self.root.configure(fg_color=COLOR_BG)

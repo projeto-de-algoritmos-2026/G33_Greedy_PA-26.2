@@ -1,11 +1,11 @@
 """
-Módulo principal com a implementação do algoritmo guloso de Huffman.
+Módulo principal com a implementação do algoritmo ambicioso de Huffman.
 
 Fluxo do algoritmo:
 1. Contar a frequência de cada byte (0 a 255).
 2. Criar um nó folha para cada byte com frequência > 0.
 3. Inserir todos os nós na Min-Heap manual.
-4. Escolha gulosa em loop:
+4. Escolha ambiciosa em loop:
    - Extrair os dois nós com menor frequência da Min-Heap.
    - Criar um novo nó interno com a soma dessas frequências.
    - Inserir o novo nó de volta na Min-Heap.
@@ -33,15 +33,15 @@ def count_frequencies(data: bytes) -> Dict[int, int]:
 
 def build_huffman_tree(frequencies: Dict[int, int]) -> Optional[HuffmanNode]:
     """
-    Constrói a árvore de Huffman utilizando uma Min-Heap manual e a estratégia gulosa.
+    Constrói a árvore de Huffman utilizando uma Min-Heap manual e a estratégia ambiciosa.
 
-    Decisão gulosa:
+    Decisão ambiciosa:
     'Em cada etapa, escolher os dois nós de menor frequência disponíveis.'
 
     Complexidade:
     - n = quantidade de símbolos distintos (n <= 256 para bytes)
     - Inserção inicial de n nós na Min-Heap: O(n log n)
-    - n - 1 iterações gulosas: cada iteração faz 2 extrações e 1 inserção em O(log n)
+    - n - 1 iterações ambiciosas: cada iteração faz 2 extrações e 1 inserção em O(log n)
     - Custo total da árvore: O(n log n)
     """
     if not frequencies:
@@ -62,7 +62,7 @@ def build_huffman_tree(frequencies: Dict[int, int]) -> Optional[HuffmanNode]:
         leaf = HuffmanNode(symbol=symbol, frequency=freq)
         heap.insert(leaf)
 
-    # Passo 2: Laço guloso - combinar os dois nós com menor frequência
+    # Passo 2: Laço ambicioso - combinar os dois nós com menor frequência
     while heap.size() > 1:
         # DECISÃO GULOSA:
         # Extrair sempre os dois nós com menor frequência disponíveis
@@ -247,7 +247,7 @@ def format_symbol(symbol: int) -> str:
 
 
 class GreedyStep:
-    """Representa um passo individual na construção gulosa da árvore de Huffman."""
+    """Representa um passo individual na construção ambiciosa da árvore de Huffman."""
 
     def __init__(
         self,
@@ -270,7 +270,7 @@ class GreedyStep:
 
 def simulate_greedy_steps(frequencies: Dict[int, int]) -> list:
     """
-    Simula e grava cada decisão gulosa da construção da árvore de Huffman.
+    Simula e grava cada decisão ambiciosa da construção da árvore de Huffman.
     Retorna uma lista de objetos GreedyStep para reprodução visual passo a passo.
     """
     if not frequencies or len(frequencies) < 2:

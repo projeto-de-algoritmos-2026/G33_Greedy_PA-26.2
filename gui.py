@@ -8,7 +8,7 @@ Princípios visuais:
 - Abas discretas com linha indicadora ativa sutil (accent).
 - Árvore de Huffman com "Ajustar à tela" (Fit to View), zoom (40%-250%), pan e destaque de caminho até a raiz.
 - Gráfico de frequências responsivo, colunas perfeitamente alinhadas e clique para seleção.
-- Stepper do algoritmo guloso detalhando extração dos dois menores, fusão e nova heap.
+- Stepper do algoritmo ambicioso detalhando extração dos dois menores, fusão e nova heap.
 - Simulador didático "Experimentar Huffman" com visualização dos bits (original vs huffman).
 - Visão geral com explicação de overhead (payload vs cabeçalho) e detalhes técnicos recolhíveis.
 """
@@ -244,7 +244,7 @@ class ModernTabBar(ctk.CTkFrame):
 # =============================================================================
 class ModernTreeCanvas(ctk.CTkFrame):
     """
-    Visualizador interativo e responsivo da árvore de Huffman:
+    Visualizador interativo da árvore de Huffman:
     - Ocupa praticamente toda a aba
     - Ajustar à tela (Fit to View) real
     - Zoom (40% a 250%) com scroll ou botões
@@ -1175,7 +1175,7 @@ class AlgorithmStepperView(ctk.CTkFrame):
 
         ctk.CTkLabel(
             header,
-            text="Algoritmo de Huffman: Decisões Gulosas",
+            text="Algoritmo de Huffman: Decisões Ambiciosas",
             font=ctk.CTkFont(family=FONT_FAMILY_SANS, size=14, weight="bold"),
             text_color=COLOR_TEXT_PRIMARY,
         ).pack(side="left")
@@ -1699,7 +1699,7 @@ class HuffPressGUI:
 
     def __init__(self, root: ctk.CTk):
         self.root = root
-        self.root.title("HuffPress - Compactador Didático")
+        self.root.title("HuffPress")
         self.root.geometry("1180x760")
         self.root.minsize(980, 680)
         self.root.configure(fg_color=COLOR_BG)
@@ -1779,7 +1779,7 @@ class HuffPressGUI:
 
         ctk.CTkLabel(
             center_wrapper,
-            text="Compactação sem perdas orientada pelo algoritmo guloso de Huffman.",
+            text="Compactação sem perdas orientada pelo algoritmo ambicioso de Huffman.",
             font=ctk.CTkFont(family=FONT_FAMILY_SANS, size=13),
             text_color=COLOR_TEXT_SECONDARY,
         ).pack(pady=(0, 24))
@@ -2666,7 +2666,7 @@ class HuffPressGUI:
         messagebox.showinfo(
             "Sobre o HuffPress",
             "HuffPress 2.0\n\n"
-            "Aplicação Desktop para Codificação e Análise de Huffman (Algoritmo Guloso).\n\n"
+            "Aplicação Desktop para Codificação e Análise de Huffman (Algoritmo Ambicioso).\n\n"
             "Desenvolvido para a disciplina de Projeto de Algoritmos (PA) — UnB.\n\n"
             "• Min-Heap manual em lista/vetor (sem uso de heapq)\n"
             "• Árvore de Huffman e Bit Packing manual\n"

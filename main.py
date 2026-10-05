@@ -24,7 +24,7 @@ def main():
 
     # Suporte a argumentos CLI opcionais
     parser = argparse.ArgumentParser(
-        description="HuffPress - Compactador de arquivos com Huffman (Algoritmo Guloso)"
+        description="HuffPress - Compactador de arquivos com Huffman (Algoritmo Ambicioso)"
     )
     group = parser.add_mutually_exclusive_group(required=False)
     group.add_argument(

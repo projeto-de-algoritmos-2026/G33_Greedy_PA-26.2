@@ -158,7 +158,11 @@ Permite ao usuário digitar qualquer palavra curta (ex.: `BANANA`, `ABRACADABRA`
 ## Vídeo de Apresentação
 
 <div align="center">
-  <i>(Vídeo de apresentação em processamento/upload)</i>
+  <a href="https://youtu.be/pWYLnXt7ECY">
+    <img src="https://img.youtube.com/vi/pWYLnXt7ECY/maxresdefault.jpg" alt="Apresentação HuffPress - Algoritmos Ambiciosos e Huffman" width="720">
+  </a>
+  <br>
+  <a href="https://youtu.be/pWYLnXt7ECY">🎥 Assistir à Apresentação no YouTube</a>
 </div>
 
 ---
